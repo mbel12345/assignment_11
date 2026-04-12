@@ -2,7 +2,7 @@
 
 ## Set up Repo
 In Github:
-Create new repo called assignment_10 and make sure it is public
+Create new repo called assignment_11 and make sure it is public
 
 In WSL/VS Code Terminal:
 ```bash
