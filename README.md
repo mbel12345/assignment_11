@@ -32,22 +32,7 @@ In WSL/VS Code Terminal:
 docker compose up --build
 ```
 
-## Run app as stand-alone Python app
-In WSL/VS Code Terminal:
-```bash
-python3 main.py
-```
-
-In Browser, go to:
-http://localhost:8000/
-
 ## Run test cases locally
-Copy .env.local to .env - So that local postgres is used
-
-In WSL/VS Code Terminal (it not done in previous steps):
-```bash
-docker compose up --build
-```
 
 In second WSL/VS Code Terminal:
 ```bash
