@@ -1,6 +1,7 @@
 __pycache__/
 .DS_Store
 .coverage
+.env
 .pytest_cache
 *.password.txt
 *.pyc
