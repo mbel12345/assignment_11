@@ -6,7 +6,7 @@ Addition, Subtraction, Multiplication, and Division all inherit from a base Calc
 
 import uuid
 
-from sqlalchemy import Column, Float, ForeignKey, func, String
+from sqlalchemy import Column, DateTime, Float, ForeignKey, func, String
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import declared_attr, relationship, validates
 
@@ -82,6 +82,25 @@ class AbstractCalculation:
             nullable=False,
         )
 
+    @declared_attr
+    def created_at(cls):
+
+        return Column(
+            DateTime(timezone=True),
+            server_default=func.now(),
+            nullable=False,
+        )
+
+    @declared_attr
+    def updated_at(cls):
+
+        return Column(
+            DateTime(timezone=True),
+            server_default=func.now(),
+            onupdate=func.now(),
+            nullable=False,
+        )
+
     @validates('a', 'b')
     def validate_numbers(self, key, value):
         if not isinstance(value, (int, float)):
@@ -128,6 +147,12 @@ class AbstractCalculation:
         raise NotImplementedError(
             'Subclasses must implement get_result() method',
         )
+
+    def set_result(self) -> float:
+
+        # Set DB result field
+
+        self.result = self.get_result()
 
     def __repr__(self):
 

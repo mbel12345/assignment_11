@@ -42,7 +42,14 @@ In Browser, go to:
 http://localhost:8000/
 
 ## Run test cases locally
-In WSL/VS Code Terminal:
+Copy .env.local to .env - So that local postgres is used
+
+In WSL/VS Code Terminal (it not done in previous steps):
+```bash
+docker compose up --build
+```
+
+In second WSL/VS Code Terminal:
 ```bash
 pytest
 ```
