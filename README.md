@@ -1,3 +1,7 @@
+# Repos
+Github: https://github.com/mbel12345/assignment_11/
+Dockerhub: https://hub.docker.com/r/msb64/assignment_11
+
 # Project Setup
 
 ## Set up Repo
