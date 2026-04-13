@@ -45,7 +45,7 @@ pytest
 
 ## Configure Github Actions
 Github Actions will run on any pushes or pull requests. Only pull requests will result in the deployment step.
-Pre-requisite: In Dockerhub, create an Access Token, then add it to Environment var "DOCKERHUB_PASSWORD" in GitHub. Add DOCKERHUB_USERNAME also.
+Pre-requisite: In Dockerhub, create an Access Token, then add it to Environment var "DOCKERHUB_TOKEN" in GitHub. Add DOCKERHUB_USERNAME also.
 
 Add these environment variables in Github:
   - POSTGRES_USER = postgres
