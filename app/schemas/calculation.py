@@ -51,7 +51,7 @@ class CalculationBase(BaseModel):
 
         allowed = {e.value for e in CalculationType}
         if not isinstance(v, str) or v.lower() not in allowed:
-            raise ValueError(f'Type must be one of {', '.join(sorted(allowed))}')
+            raise ValueError(f"Type must be one of {', '.join(sorted(allowed))}")
         return v.lower()
 
     # validate_a is not needed as Pydantic does this automatically based on the Field Type
