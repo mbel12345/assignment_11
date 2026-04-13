@@ -241,6 +241,48 @@ def test_calculation_create_missing_user_id():
     with pytest.raises(ValidationError, match=r'1 validation error for CalculationCreate\s+user_id'):
         CalculationCreate(**data)
 
+def test_calculation_create_invalid_type():
+
+    # Test that invalid type raises ValidationError
+
+    data = {
+        'type': '???',
+        'a': 5,
+        'b': 10,
+        'user_id': str(uuid4()),
+    }
+
+    with pytest.raises(ValidationError, match=r'1 validation error for CalculationCreate\s+type'):
+        CalculationCreate(**data)
+
+def test_calculation_create_invalid_a():
+
+    # Test that invalid a raises ValidationError
+
+    data = {
+        'type': 'subtraction',
+        'a': 'string_value',
+        'b': 10,
+        'user_id': str(uuid4()),
+    }
+
+    with pytest.raises(ValidationError, match=r'1 validation error for CalculationCreate\s+a'):
+        CalculationCreate(**data)
+
+def test_calculation_create_invalid_b():
+
+    # Test that invalid b raises ValidationError
+
+    data = {
+        'type': 'subtraction',
+        'a': 5,
+        'b': 'string_value',
+        'user_id': str(uuid4()),
+    }
+
+    with pytest.raises(ValidationError, match=r'1 validation error for CalculationCreate\s+b'):
+        CalculationCreate(**data)
+
 def test_calculation_create_invalid_user_id():
 
     # Test that invalid UUID format raises ValidationError
