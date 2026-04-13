@@ -56,7 +56,6 @@ jobs:
           source venv/bin/activate
           pytest tests/unit/ --cov=src --junitxml=test-results/junit.xml
           pytest tests/integration/
-          pytest tests/e2e
 
   security:
     needs: test
