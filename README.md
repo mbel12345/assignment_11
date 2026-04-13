@@ -26,7 +26,7 @@ pip install -r requirements.txt
 ```
 
 ## Build image and start container
-Note: This must be up-and-running for all local testing
+Note: This must be already running for all local testing
 In WSL/VS Code Terminal:
 ```bash
 docker compose up --build
