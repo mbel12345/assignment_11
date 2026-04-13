@@ -1,3 +1,7 @@
+# Repos
+Github: https://github.com/mbel12345/assignment_11/
+Dockerhub: https://hub.docker.com/r/msb64/assignment_11
+
 # Project Setup
 
 ## Set up Repo
@@ -26,7 +30,7 @@ pip install -r requirements.txt
 ```
 
 ## Build image and start container
-Note: This must be up-and-running for all local testing
+Note: This must be already running for all local testing
 In WSL/VS Code Terminal:
 ```bash
 docker compose up --build
