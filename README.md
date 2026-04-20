@@ -50,3 +50,6 @@ Pre-requisite: In Dockerhub, create an Access Token, then add it to Environment 
 Add these environment variables in Github:
   - POSTGRES_USER = postgres
   - POSTGRES_PASSWORD = postgres
+
+## Addendum
+In Assignment 12, I accidentally pushed the image to assignment_11, so this commit is to trigger re-adding assignment_11 image.
